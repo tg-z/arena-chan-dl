@@ -36,7 +36,7 @@ const channel = slug => ({
 
     console.log(chalk.grey(`Downloading <${block.id}:${block.image.original.url}>`));
 
-    const dir = `./downloads/${slug}`;
+    const dir = `/Users/bluetooth/documents/promnesia/are.na/${slug}`;
     if (!fs.existsSync(dir)) fs.mkdirSync(dir);
 
     return axios
