@@ -13,5 +13,5 @@ require('yargs')
     console.log('hello', argv.name, 'welcome to yargs!')
   })
   .help('help').alias('help', 'h')
-  .version('version').alias('version', 'v')
+  .version('version', '1.0.0').alias('version', 'v')
   .argv
