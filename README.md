@@ -33,7 +33,7 @@ arena-chan-dl frog ./download
 arena-chan-dl frog ~/documents/promnesia/are.na
 ```
 
-![](http://static.damonzucconi.com/_capture/4mTGkMs6JI.gif)
+![](test/demo.gif)
 
 this is a fork of [aredotna/download-arena-channel](https://github.com/aredotna/download-arena-channel) <3
 
