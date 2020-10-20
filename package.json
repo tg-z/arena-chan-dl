@@ -27,7 +27,7 @@
     "download"
   ],
   "scripts": {
-    "start": "git pull && npm i -g",
+    "start": "npm i",
     "version": "np patch",
     "release": "np --no-tests --no-yarn --preview"
   },
