@@ -16,7 +16,10 @@ npm -i
 ```bash
 # install using npm
 npm -i -g arena-chan-dl
+```
 
+### usage
+```bash
 # define channel-slug + output path
 arena-chan-dl <channel-slug> <dir>
 
