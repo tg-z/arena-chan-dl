@@ -4,15 +4,13 @@
 # install
 available from the npm registry. requires [node.js](https://nodejs.org/en/download/) to be installed.
 
-### global
 ```bash
-# install using npm
+# install globally with npm
 npm -i -g arena-chan-dl
 ```
 
-### local
 ```bash
-# clone repo
+# install locally with git
 git clone https://gitlab.com/tg-z/arena-chan-dl
 
 # go to repo dir
@@ -22,7 +20,7 @@ cd arena-chan-dl
 npm -i
 ```
 
-### usage
+# usage
 ```bash
 # define channel-slug + output path
 arena-chan-dl <channel-slug> <dir>
