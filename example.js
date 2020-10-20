@@ -12,6 +12,7 @@ require('yargs')
   }, function (argv) {
     console.log('hello', argv.slug, 'welcome to yargs!')
   })
+  .dir('dir').alias('dir', 'd')
   .help('help').alias('help', 'h')
-  .version('version', '1.0.0').alias('version', 'V')
+  .version('version', '1.0.0').alias('version', 'v')
   .argv;
