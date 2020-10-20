@@ -13,4 +13,4 @@ require('yargs')
     console.log('hello', argv.name, 'welcome to yargs!')
   })
   .help()
-  .argv
+  .argv;
