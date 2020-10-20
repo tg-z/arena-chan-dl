@@ -11,12 +11,12 @@
   "author": "tg-z",
   "private": false,
   "dependencies": {
-    "axios": "^0.16.1",
-    "chalk": "^4.1.0",
-    "mime": "^1.3.4",
-    "parameterize": "^0.0.7",
-    "ramda": "^0.24.1",
-    "yargs": "^16.1.0"
+    "axios": ">=0.18.1",
+    "chalk": ">=4.1.0",
+    "mime": ">=1.3.4",
+    "parameterize": ">=0.0.7",
+    "ramda": ">=0.24.1",
+    "yargs": ">=16.1.0"
   },
   "bin": {
     "arena-chan-dl": "./index.js"
@@ -32,6 +32,6 @@
     "release": "np --no-tests --no-yarn --preview"
   },
   "devDependencies": {
-    "np": "^6.5.0"
+    "np": ">=6.5.0"
   }
 }
