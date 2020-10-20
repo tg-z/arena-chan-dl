@@ -2,6 +2,14 @@
 > cli tool for archiving [are.na](https://are.na/) channel content with ease
 
 # install
+available from the npm registry. requires [node.js](https://nodejs.org/en/download/) to be installed.
+
+### global
+```bash
+# install using npm
+npm -i -g arena-chan-dl
+```
+
 ### local
 ```bash
 # clone repo
@@ -12,12 +20,6 @@ cd arena-chan-dl
 
 # install dependencies
 npm -i
-```
-
-### global
-```bash
-# install using npm
-npm -i -g arena-chan-dl
 ```
 
 ### usage

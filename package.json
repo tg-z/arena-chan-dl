@@ -28,5 +28,8 @@
   ],
   "scripts": {
     "start": "git pull && npm i -g"
+  },
+  "devDependencies": {
+    "np": "^6.5.0"
   }
 }
