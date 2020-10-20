@@ -47,7 +47,7 @@ const channel = slug => ({
       .then(({ data }) => {
         const title = block.title ? parameterize(block.title) : block.id;
         const ext = mime.extension(block.image.content_type);
-        const filename = `${dir}/${block.id}_${title}.${ext}`;
+        const filename = `${sdir}/${block.id}_${title}.${ext}`;
         console.log(chalk.grey(`Writing <${filename}>`));
 
         fs.writeFileSync(filename, data);
