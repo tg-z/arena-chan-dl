@@ -1,13 +1,13 @@
 {
   "name": "arena-chan-dl",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "main": "index.js",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tg-z/arena-chan-dl.git"
+    "url": "git+https://gitlab.com/tg-z/arena-chan-dl.git"
   },
-  "homepage": "https://github.com/tg-z/arena-chan-dl#readme",
+  "homepage": "https://gitlab.com/tg-z/arena-chan-dl#readme",
   "author": "tg-z",
   "private": false,
   "dependencies": {
@@ -27,7 +27,9 @@
     "download"
   ],
   "scripts": {
-    "start": "git pull && npm i -g"
+    "start": "git pull && npm i -g",
+    "version": "np patch",
+    "release": "np --no-tests --no-yarn --preview"
   },
   "devDependencies": {
     "np": "^6.5.0"
