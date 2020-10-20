@@ -9,6 +9,7 @@ const chalk = require('chalk')
 
 const args = process.argv.slice(2);
 const slug = args[0];
+const dir = args[1];
 const per = 100; // Content pagination limit
 const chunkBy = 10; // N of images to download simultaneously
 let count = 0;
@@ -29,7 +30,7 @@ const channel = slug => ({
   block: block => {
     count = count + 1
 
-    console.log(chalk.green(`Download #${count}: ${block.id}`))
+    console.log(chalk.cyan(`Download #${count}: ${block.id}`))
 
     if (!block.image) {
       console.log(`Block ${block.id} not downloaded because it does not have an image`)
@@ -38,8 +39,8 @@ const channel = slug => ({
 
     console.log(chalk.grey(`Downloading <${block.id}:${block.image.original.url}>`));
 
-    const dir = `/Users/bluetooth/documents/promnesia/are.na/${slug}`;
-    if (!fs.existsSync(dir)) fs.mkdirSync(dir);
+    const sdir = `${dir}/${slug}`;
+    if (!fs.existsSync(sdir)) fs.mkdirSync(sdir);
 
     return axios
       .get(block.image.original.url, { responseType: 'arraybuffer' })
