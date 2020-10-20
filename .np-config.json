@@ -1,0 +1,6 @@
+{
+	"yarn": false,
+	"contents": ".",
+	"cleanup": true,
+	"tests": false
+}
