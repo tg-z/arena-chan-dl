@@ -64,7 +64,7 @@ client
   .thumb()
   .then(({ data: { title, length } }) => {
     const numberOfPages = Math.ceil(length / per);
-    console.log(chalk.greenBright(`The channel <${title}> has ${length} blocks. Proceeding to download...`));
+    console.log(chalk.blue(`The channel <${title}> has ${length} blocks. Proceeding to download...`));
     const request = i => client.page({ page: i + 1, per });
     return Promise.all(R.times(request, numberOfPages));
   })
