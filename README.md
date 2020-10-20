@@ -1,22 +1,30 @@
 # `$ arena-chan-dl`
-
+## install
+### local
 ```bash
-# local node installation
+# clone repo
 git clone https://gitlab.com/tg-z/arena-chan-dl
+
+# go to repo dir
 cd arena-chan-dl
+
+# install dependencies
 npm -i
+```
+
+### global
+```bash
+# install using npm
+npm -i -g arena-chan-dl
 
 # define channel-slug + output path
-node index.js <channel-slug> <dir>
+arena-chan-dl <channel-slug> <dir>
 
 # download channel to a relative folder
-node index.js frog ./download
+arena-chan-dl frog ./download
 
 # download channel to custom directory
-node index.js frog ~/documents/promnesia/are.na
-
-# global installation
-npm -i -g arena-chan-dl
+arena-chan-dl frog ~/documents/promnesia/are.na
 ```
 
 ![](http://static.damonzucconi.com/_capture/4mTGkMs6JI.gif)
