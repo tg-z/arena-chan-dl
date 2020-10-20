@@ -3,11 +3,11 @@
 require('yargs')
   .scriptName("arena-chan-dl")
   .usage('$0 <cmd> [args]')
-  .command('hello [name]', 'welcome ter yargs!', (yargs) => {
-    yargs.positional('name', {
+  .command('downloading [slug]', 'to ./downloads', (yargs) => {
+    yargs.positional('slug', {
       type: 'string',
       default: 'frog',
-      describe: 'the name to say hello to'
+      describe: 'the unique channel slug'
     })
   }, function (argv) {
     console.log('hello', argv.name, 'welcome to yargs!')

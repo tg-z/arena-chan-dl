@@ -4,8 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "repository": {
-	  "type": "git",
-	  "url": "git+https://github.com/tg-z/arena-chan-dl.git"
+    "type": "git",
+    "url": "git+https://github.com/tg-z/arena-chan-dl.git"
   },
   "homepage": "https://github.com/tg-z/arena-chan-dl#readme",
   "author": "tg-z",
@@ -22,11 +22,11 @@
     "arena-chan-dl": "./index.js"
   },
   "keywords": [
-	  "are.na",
-	  "cli",
-	  "download"
+    "are.na",
+    "cli",
+    "download"
   ],
   "scripts": {
-	  "start": "git pull && npm i -g"
+    "start": "git pull && npm i -g"
   }
 }
