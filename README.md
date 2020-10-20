@@ -12,7 +12,7 @@ npm i -g arena-chan-dl
 
 ```bash
 # install locally with git
-git clone https://gitlab.com/tg-z/arena-chan-dl
+git clone https://gitlab.com/tg-z/arena-chan-dl --depth 1
 
 # go to repo dir
 cd arena-chan-dl
@@ -33,7 +33,7 @@ arena-chan-dl frog ./download
 arena-chan-dl frog ~/documents/promnesia/are.na
 ```
 
-![](test/demo.gif)
+![](test/demo-high.gif)
 
 this is a fork of [aredotna/download-arena-channel](https://github.com/aredotna/download-arena-channel) <3
 
