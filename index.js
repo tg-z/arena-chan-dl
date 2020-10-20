@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+const yargs = require('yargs');
 const R = require('ramda');
 const fs = require('fs');
 const axios = require('axios');
@@ -77,3 +79,21 @@ client
   .catch(err => {
     console.error(chalk.redBright(`An error occurred: ${err.stack}`));
   });
+
+
+yargs
+  .scriptName("arena-chan-dl")
+  .usage('$0 <cmd> [args]')
+  .command('hello [slug]', 'welcome ter yargs!', (yargs) => {
+    yargs.positional('slug', {
+      type: 'string',
+      default: 'frog',
+      describe: 'the channel to download'
+    })
+  }, function (argv) {
+    console.log('hello', argv.name, 'welcome to yargs!')
+  })
+  .help()
+  .argv
+
+
