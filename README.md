@@ -7,7 +7,7 @@ available from the npm registry. requires [node.js](https://nodejs.org/en/downlo
 
 ```bash
 # install globally with npm
-npm -i -g arena-chan-dl
+npm i -g arena-chan-dl
 ```
 
 ```bash
@@ -18,7 +18,7 @@ git clone https://gitlab.com/tg-z/arena-chan-dl
 cd arena-chan-dl
 
 # install dependencies
-npm -i
+npm i
 ```
 
 # usage
