@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-cli tool for archiving [are.na](https://are.na/) channel content with ease.
+cli tool for archiving are.na channel content with ease.
 </p>
 
 <p align="center">
