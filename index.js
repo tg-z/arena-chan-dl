@@ -7,20 +7,6 @@ const mime = require('mime');
 const chalk = require('chalk')
 const makeDir = require('make-dir');
 const yargs = require('yargs');
-// yargs
-//   .scriptName("arena-chan-dl")
-//   .usage('$0 <cmd> [args]')
-//   .command("get", '[channel-slug]',"download contents of an are.na channel."), (yargs) => {
-//     yargs.positional('slug', {
-//       type: 'string',
-//       default: '',
-//       describe: 'slug of the channel to download'
-//     })
-//   }, function (argv) {
-//     console.log('Fetching...', argv.slug)
-//   }
-//   .help()
-//   .argv;
 yargs
   .scriptName('arena-chan-dl')
   .usage('$0 <cmd> <slug> [options]')
@@ -39,6 +25,13 @@ yargs
   .alias('h','help')
   .alias('V','version')
   .argv
+const updateNotifier = require('update-notifier');
+const pkg = require('./package.json');
+const notifier = updateNotifier({
+	pkg,
+	updateCheckInterval: 1000 * 60 * 60 * 24 * 7
+}).notify();
+
 const args = process.argv.slice(2);
 const slug = args[1];
 const dir = args[2];
