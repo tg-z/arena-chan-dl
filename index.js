@@ -5,6 +5,7 @@ const axios = require('axios');
 const parameterize = require('parameterize');
 const mime = require('mime');
 const chalk = require('chalk')
+const makeDir = require('make-dir');
 const yargs = require('yargs');
 // yargs
 //   .scriptName("arena-chan-dl")
@@ -47,7 +48,6 @@ let count = 0;
 
 const channel = slug => ({
   thumb: () => {
-    console.log(`Fetching the channel <${slug}>`);
     return axios.get(`https://api.are.na/v2/channels/${slug}/thumb`);
   },
 
@@ -68,16 +68,23 @@ const channel = slug => ({
       return Promise.resolve()
     };
 
-    console.log(chalk.grey(`Downloading <${block.id}:${block.image.original.url}>`));
+    console.log(chalk.grey(`Downloading <${block.image.original.url}>`));
 
     const sdir = `${dir}/${slug}`;
-    if (!fs.existsSync(sdir)) fs.mkdirSync(sdir);
+(async () => {
+    const path = await makeDir(sdir);
+ 
+    console.log(path);
+})();
+    // if (!fs.existsSync(sdir)) fs.mkdirSync(sdir);
 
     return axios
       .get(block.image.original.url, { responseType: 'arraybuffer' })
       .then(({ data }) => {
         const title = block.title ? parameterize(block.title) : block.id;
-        const ext = mime.extension(block.image.content_type);
+	// const fileName = url => url.substring(url.lastIndexOf('/') + 1);
+        // const extension = fileName(block.image.original.url);
+	const ext = mime.getExtension(block.image.content_type);
         const filename = `${sdir}/${block.id}_${title}.${ext}`;
         console.log(chalk.grey(`Writing <${filename}>`));
 
