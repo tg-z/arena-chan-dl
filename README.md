@@ -1,4 +1,4 @@
-<h1 align="center"><code>$ arena-chan-dl</code></h1>
+# `$ arena-chan-dl`
 
 <p align="center">
 <a href="https://github.com/tg-z/arena-chan-dl/issues"><img alt="github issues" src="https://img.shields.io/github/issues/tg-z/arena-chan-dl?color=ff69b4"></a>
@@ -38,6 +38,10 @@ npm i
 
 ## usage
 ```bash
+# help
+arena-chan-dl -h
+arena-chan-dl --help
+
 # define channel-slug + output path
 arena-chan-dl get <slug> <dir>
 
