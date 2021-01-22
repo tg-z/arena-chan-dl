@@ -10,6 +10,7 @@
   "homepage": "https://gitlab.com/tg-z/arena-chan-dl#readme",
   "author": "tg-z",
   "private": false,
+  "preferGlobal": true,
   "dependencies": {
     "axios": ">=0.18.1",
     "chalk": ">=4.1.0",

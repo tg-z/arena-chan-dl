@@ -81,10 +81,27 @@ client
     console.error(chalk.redBright(`An error occurred: ${err.stack}`));
   });
 
-
 yargs
   .scriptName("arena-chan-dl")
   .usage('$0 <cmd> [args]')
+  .help('h')
+  .alias('f', 'file')
+  .nargs("f", 1)
+  .describe("f", "batch input channel slugs using file.")
+  .alias('d','dir')
+  .nargs("d", 1)
+  .describe("d", "set the output directory for downloads.")
+  .demandOption(["d"])
+  .command("get", '[channel-slug]',"download contents of an are.na channel."), (yargs) => {
+    yargs.positional('slug', {
+      type: 'string',
+      default: '',
+      describe: 'slug of the channel to download'
+    })
+  }, function (argv) {
+    console.log('Fetching...', argv.name)
+  }
+  .example("$0 get <channel-slug>","download specific are.na channel")
   .command('hello [slug]', 'welcome ter yargs!', (yargs) => {
     yargs.positional('slug', {
       type: 'string',
@@ -94,5 +111,4 @@ yargs
   }, function (argv) {
     console.log('hello', argv.name, 'welcome to yargs!')
   })
-  .help()
-  .argv
+  .alias('h', 'help').argv
