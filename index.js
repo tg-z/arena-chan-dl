@@ -22,19 +22,25 @@ const yargs = require('yargs');
 //   .argv;
 yargs
   .scriptName('arena-chan-dl')
-  .usage('$0 <cmd> [args]')
-  .command('get', '[slug]', "download contents of an are.na channel.", (yargs) {
-    return yargs.option('url', {
-      alias: 'u',
-      default: 'http://yargs.js.org/'
+  .usage('$0 <cmd> <slug> [options]')
+  .command('get <slug>','download contents of an are.na channel', function (yargs) {
+    return yargs.positional('slug', {
+      type: 'string',
+      default: 'frog',
+      describe: 'slug of the channel to download'
     })
+  }, function (argv) {
+    console.log(chalk.blue('Fetching the channel', argv.slug))
   })
+
+  .example('$0 get frog','download specific are.na channel')
   .help()
   .alias('h','help')
+  .alias('V','version')
   .argv
 const args = process.argv.slice(2);
-const slug = args[0];
-const dir = args[1];
+const slug = args[1];
+const dir = args[2];
 const per = 100; // Content pagination limit
 const chunkBy = 10; // N of images to download simultaneously
 let count = 0;
@@ -105,16 +111,3 @@ client
   .catch(err => {
     console.error(chalk.redBright(`An error occurred: ${err.stack}`));
   });
-
-
-  // .example("$0 get <channel-slug>","download specific are.na channel")
-  // .command('gett [slug]', 'welcome ter yargs!', (yargs) => {
-  //   yargs.positional('slug', {
-  //     type: 'string',
-  //     default: 'frog',
-  //     describe: 'the channel to download'
-  //   })
-  // }, function (argv) {
-  //   console.log('hello', argv.name, 'welcome to yargs!')
-  // })
-

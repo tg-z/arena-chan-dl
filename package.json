@@ -1,6 +1,6 @@
 {
   "name": "arena-chan-dl",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "index.js",
   "license": "MIT",
   "repository": {
@@ -20,7 +20,7 @@
     "yargs": ">=16.1.0"
   },
   "bin": {
-    "arena-chan-dl": "./index.js"
+    "arena-chan-dl": "index.js"
   },
   "keywords": [
     "are.na",
