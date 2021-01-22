@@ -14,7 +14,7 @@ cli tool for archiving are.na channel content with ease.
 <p align="center">
   <a href="#install">install</a> •
   <a href="#usage">usage</a> •
-  <a href="#extra">extra</a><br>
+  <a href="#extra">credit</a><br>
 </p>
 
 ## install
@@ -22,33 +22,33 @@ available from the npm registry. requires [node.js](https://nodejs.org/en/downlo
 
 ```bash
 # install globally with npm
-npm -i -g arena-chan-dl
+npm i -g arena-chan-dl
 ```
 
 ```bash
 # install locally with git
-git clone https://gitlab.com/tg-z/arena-chan-dl
+git clone https://github.com/tg-z/arena-chan-dl
 
 # go to repo dir
 cd arena-chan-dl
 
 # install dependencies
-npm -i
+npm i
 ```
 
 ## usage
 ```bash
 # define channel-slug + output path
-arena-chan-dl <channel-slug> <dir>
+arena-chan-dl get <slug> <dir>
 
 # download channel to a relative folder
-arena-chan-dl frog ./download
+arena-chan-dl get frog ./downloads
 
 # download channel to custom directory
-arena-chan-dl frog ~/documents/promnesia/are.na
+arena-chan-dl get frog ~/documents/promnesia/are.na
 ```
 
 ![](http://static.damonzucconi.com/_capture/4mTGkMs6JI.gif)
 
-## extra
+## credit
 this is a fork of [aredotna/download-arena-channel](https://github.com/aredotna/download-arena-channel) <3
