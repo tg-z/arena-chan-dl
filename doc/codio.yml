@@ -1,0 +1,28 @@
+speed: 9
+lines:
+- prompt: $
+  in: npm install -g arena-chan-dl
+- out: '    '
+- prompt: $
+  in: arena-chan-dl -h
+- out: 'arena-chan-dl <cmd> <slug> [options]'
+- out: '    '
+- out: 'Commands:'
+- out: '    '
+- out: '  arena-chan-dl get <slug>  download contents of an are.na channel'
+- out: '    '
+- out: 'Options:'
+- out: '  -h, --help     Show help                                             [boolean]'
+- out: '  -V, --version  Show version number                                   [boolean]'
+- out: '    '
+- out: 'Examples:'
+- out: '  arena-chan-dl get frog                        download specific are.na channel'
+- prompt: $
+  in: arena-chan-dl get frog ./downloads
+- out: 'Fetching the channel frog'
+- progress: true
+  progressChar: █
+- prompt: $
+  in: ls downloads
+- out: ' frog'
+  color: cyan
