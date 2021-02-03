@@ -1,10 +1,9 @@
 # `$ arena-chan-dl`
 
 <p align="center">
-<a href="https://github.com/tg-z/arena-chan-dl/issues"><img alt="github issues" src="https://img.shields.io/github/issues/tg-z/arena-chan-dl?color=ff69b4"></a>
-<a href="https://github.com/tg-z/arena-chan-dl/stargazers"><img alt="github stars" src="https://img.shields.io/github/stars/tg-z/arena-chan-dl?color=ff69b4"></a>
-<a href="https://github.com/tg-z/arena-chan-dl/graphs/contributors" alt="contributors">
-<img src="https://img.shields.io/github/contributors/tg-z/arena-chan-dl?color=ff69b4"/></a>
+<a href="https://github.com/tg-z/arena-chan-dl/stargazers"><img alt="github stars" src="https://badgen.net/github/stars/tg-z/arena-chan-dl?color=cyan"></a>
+<a href="https://www.npmjs.org/package/arena-chan-dl"><img src="https://badgen.net/npm/v/arena-chan-dl?color=cyan" alt="npm version"></a>
+<a href="https://www.npmjs.org/package/arena-chan-dl"><img src="https://badgen.net/npm/dt/arena-chan-dl?color=cyan" alt="npm downloads"></a>
 </p>
 
 <p align="center">
@@ -18,7 +17,8 @@ cli tool for archiving are.na channel content with ease.
 </p>
 
 ## install
-available from the npm registry. requires [node.js](https://nodejs.org/en/download/) to be installed.
+
+available from the [npm](https://www.npmjs.org/) registry. requires [node.js](https://nodejs.org/en/download/) to be installed.
 
 ```bash
 # install globally with npm
@@ -39,8 +39,7 @@ npm i
 ## usage
 ```bash
 # help
-arena-chan-dl -h
-arena-chan-dl --help
+arena-chan-dl -h, --help
 
 # define channel-slug + output path
 arena-chan-dl get <slug> <dir>
@@ -52,7 +51,7 @@ arena-chan-dl get frog ./downloads
 arena-chan-dl get frog ~/documents/promnesia/are.na
 ```
 
-![](http://static.damonzucconi.com/_capture/4mTGkMs6JI.gif)
+![demo](doc/rec.mp4)
 
 ## credit
 this is a fork of [aredotna/download-arena-channel](https://github.com/aredotna/download-arena-channel) <3
