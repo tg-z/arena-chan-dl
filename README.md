@@ -51,7 +51,7 @@ arena-chan-dl get frog ./downloads
 arena-chan-dl get frog ~/documents/promnesia/are.na
 ```
 
-![demo](doc/rec.gif)
+![demo](doc/demo.gif)
 
 ## credit
 this is a fork of [aredotna/download-arena-channel](https://github.com/aredotna/download-arena-channel) <3

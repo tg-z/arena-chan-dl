@@ -1,9 +1,8 @@
 # arena-chan-dl
-by @tg-z | https://pond.computer
-
----
 
 cli tool for archiving are.na channel content with ease.
+
+by @tg-z | https://pond.computer
 
 ---
 
