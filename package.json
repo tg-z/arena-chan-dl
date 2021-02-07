@@ -32,11 +32,6 @@
   ],
   "scripts": {
     "start": "npm i",
-    "version": "np patch",
-    "release": "np --no-tests --no-yarn --preview",
     "pub": "npm publish"
-  },
-  "devDependencies": {
-    "np": ">=6.5.0"
   }
 }
